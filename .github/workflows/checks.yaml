@@ -44,7 +44,7 @@ jobs:
             echo "Lint chart"
             helmv3 lint ./helloapp-chart/
             echo "Run kubeval"
-            helmv3 template ./charts/test | kubeval --strict
+            helmv3 template ./helloapp-chart/ | kubeval --strict
   docker:
     runs-on: ubuntu-20.04
     steps:
